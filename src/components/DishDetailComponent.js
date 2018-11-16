@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CommentForm from "./CommentFormComponent";
 import {
   Card,
   CardImg,
@@ -42,6 +43,7 @@ function RenderComments({ comments }) {
     <div className="container">
       <h4>Comments</h4>
       <div className="row">{comment}</div>
+      <CommentForm />
     </div>
   );
 }
