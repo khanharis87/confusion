@@ -11,7 +11,6 @@ import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 
 function RenderCard({ item, isLoading, errMessage }) {
-  console.log(item, isLoading, errMessage);
   if (isLoading) {
     return <Loading />;
   } else if (errMessage) {
@@ -48,7 +47,7 @@ function Home(props) {
           <RenderCard
             item={props.promotion}
             isLoading={props.promoLoading}
-            errMessage={props.promoErrMess}
+            errMessage={props.promoErrMsg}
           />
         </div>
         <div className="col-12 col-md m-1">
