@@ -18,6 +18,7 @@ import {
 } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
 
 class CommentForm extends Component {
   constructor(props) {
@@ -130,7 +131,7 @@ class CommentForm extends Component {
 function RenderDish({ dish }) {
   return (
     <Card>
-      <CardImg top width="100%" src={dish.image} alt={dish.name} />
+      <CardImg top width="100%" src={baseUrl + dish.image} alt={dish.name} />
       <CardBody>
         <CardTitle>{dish.name}</CardTitle>
         <CardText>{dish.description}</CardText>
